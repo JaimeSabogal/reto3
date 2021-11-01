@@ -1,0 +1,84 @@
+
+////////////// Comando maquina virtual gitbach //////////////////
+
+*sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent maquina siempre encendida  *
+*********************************************************************************************
+
+********************************************************************************************************************
+Configuración maquina virtual
+********************************************************************************************************************
+chmod 400 ssh-key-2021-10-24.key
+ssh -i ssh-key-2021-10-24.key opc@129.159.63.183
+sudo yum install git
+sudo yum install java-11-openjdk-devel
+sudo yum-config-manager --add-repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+sudo yum-config-manager --enable epel-apache-maven
+sudo yum install -y apache-maven
+sudo alternatives --config java (escribir1)
+sudo alternatives --config javac (escribir1)
+********************************************************************************************************************
+
+
+
+*******************************************************************************
+Clonar en github
+*******************************************************************************
+git init
+git add .
+git commit -m “first commit”
+
+crear nuevo repositorio en github y se copia la url 
+
+git remote add origin https://github.com/JhonnyCamilo/back_domingo.git
+git push -u origin master
+
+*****************************************************************************
+COMANDOS PARA CLONAR EL REPOSITORIO EN LA INSTACIA DE LINUX:
+git clone https://github.com/JhonnyCamilo/back_domingo.git
+
+mvn clean package -DskipTests (crear target)
+
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+
+sudo pkill java (para maquina)
+*****************************************************************************
+
+
+
+
+************
+Resumen
+************
+
+chmod 400 ssh-key-2021-10-24.key
+ssh -i ssh-key-2021-10-24.key opc@129.159.63.183
+sudo yum install git
+sudo yum install java-11-openjdk-devel
+sudo yum-config-manager --add-repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+sudo yum-config-manager --enable epel-apache-maven
+sudo yum install -y apache-maven
+sudo alternatives --config java
+sudo alternatives --config javac
+MI PC:
+git init
+git add .
+git commit -m “first commit”
+git clone (url que copiaron del repositorio)
+git remote add origin https://github.com/JhonnyCamilo/back_domingo.git
+git push -u origin master
+VM:
+git clone https://github.com/JhonnyCamilo/back_domingo.git
+mvn clean package -DskipTests
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+
+
+
+
+
+
+
+
+
+
