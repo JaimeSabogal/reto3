@@ -1,9 +1,17 @@
-Prueba git :)
+correo profe cristian
+
+cristian.castro1.mt@correo.usa.edu.co
 
 ////////////// Comando maquina virtual gitbach //////////////////
 
 *sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent maquina siempre encendida  *
 *********************************************************************************************
+
+mi maquina virtual
+
+129.151.124.234
+
+**************************************************************************************
 
 ********************************************************************************************************************
 Configuración maquina virtual
@@ -76,7 +84,46 @@ sudo firewall-cmd --reload
 
 
 
+CREAR REPOSITORIO------------
+	git init
+	git status
+	git add .
+	git config --global user.name "nombre usuario"
+	git config --global user.email "nombre-usuario@correo.com"
+	git commit -m "comentario"
+	git branch -M main
+	git remote add origin https://enlace
+	git push -u origin main
 
+ACTIALIZAR REPOSITORIO--------------
+	git status
+	git add .
+	git commit -m "comentario"
+	git push -u origin main
+
+**********************************************************
+LANZAR MAQUINA VIRTUAL
+**********************************************************
+
+CLONAR REPOSITORIO EN LA MV--------------------------------------------------------------------
+	Debes ingresar a la maquina virtual con tus llaves y estanfo hay ejecutas el siguiente comando
+		git clone +enlace del respositorio a clonr 
+		EJEMPLO: git clone http:// https://github.repositorio/rpt.git
+
+
+
+estos omando a continuacion son para poner en ejecucion la maquina virtual
+PASOS PARA LANZAR LA MV--------------------------------------------------------------------------------------------------
+     * Entrar carpeta
+	  1)  cd +nombre carpeta
+			para saber el nombre de la carpeta que vas abrirpuedes usar
+			el comando ls pra listar las carpetas que tienes
+	  2)  mvn clean package -DskipTests
+     * Entrar en target
+	  3)  cd target
+	  4)  sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+	  5)  sudo firewall-cmd --reload
+	  6)  java -jar Reto3-0.0.1-SNAPSHOT.jar
 
 
 
